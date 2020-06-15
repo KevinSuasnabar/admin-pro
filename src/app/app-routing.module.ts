@@ -11,28 +11,9 @@ import { RegisterComponent } from './login/register.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: PagesComponent,
-    children: [
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'progress',
-        component: ProgressComponent
-      },
-      {
-        path: 'graficas1',
-        component: Graficas1Component
-      },
-      {
-        path: '',
-        redirectTo: '/dashboard', pathMatch: 'full'
-      }
-    ]
+    path:'',
+    loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
   },
-
   {
     path: 'login',
     component: LoginComponent
