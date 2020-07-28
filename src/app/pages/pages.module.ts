@@ -8,7 +8,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { SharedModule } from '../shared/shared.module';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 
 import { ChartsModule } from 'ng2-charts';
@@ -35,6 +35,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     PagesRoutingModule,
     SharedModule,
     FormsModule,
+    ReactiveFormsModule,
     ChartsModule
   ],
   exports: [
